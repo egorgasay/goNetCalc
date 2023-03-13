@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>NET CALC</title>
+  <link rel="stylesheet" href="./static/style.css">
+<body>
+  <div class="container">
+    <h2 style="text-align:center;">NET CALC</h2><br>
+    <form action="/res" method="GET" class="form">
+      <input type="search" placeholder="netmask" name="address" class="search-field" />
+      <button type="submit" class="search-button">GO</button>
+    </form><br>
+    {{if .Error}}
+    <p style="font-size: 18px;text-align:center;">
+    <h2 style="text-align:center;">{{.Error}}</h2>
+    </p>
+    {{ else }}
+    <h2 style="text-align:center;">Result:</h2>
+    <p style="font-size: 18px;text-align:center;">
+      Bit view - {{.Bit}}<br>
+      Max hosts - {{.Count}}<br>
+      Subnetwork Address - {{.AddrUnder}}<br>
+      Broadcast Address - {{.AddrBroad}}<br>
+      First Address - {{.FirstAddr}}<br>
+      Last Address - {{.LastAddr}}
+    </p>
+    {{ end }}
+
+  </div>
+  
+</body>
+</html>

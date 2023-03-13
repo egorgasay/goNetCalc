@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  background: white;
+}
+
+.container {
+  margin: 200px auto;
+  width: 500px;
+  height: 60px
+}
+
+/* The point of this tutorial is here */
+.form {
+  display: flex;
+  flex-direction: row;
+}
+.search-field {
+  width: 100%;
+  padding: 10px 35px 10px 15px;
+  border-size:4px;
+  border: solid;
+  border-radius: 100px;
+  outline: black;
+}
+
+.search-button {
+  padding: 0 10px;
+  background:black;
+  color: white;
+  border: none;
+  outline: none;
+  margin-left: -33px;
+  border-radius: 0 100px 100px 0; 
+}
+
+.search-button:hover{
+  cursor:pointer;
+  background:#18a4f8;
+}
